@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "UPSC Reader",
+  "version": "1.0",
+
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+
+  "action": {
+    "default_popup": "popup.html"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["lib/readability.js","content.js"],
+      "css": ["styles.css"]
+    }
+  ]
+}
